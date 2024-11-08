@@ -27,7 +27,7 @@ def process_tile(image, scale, tx, ty, tile_size, level, output_dir):
         output_path = os.path.join(output_dir, output_filename)
 
         # 保存为 JPG 文件
-        region.write_to_file(output_path, Q=90)  # Q=90 表示 JPEG 质量
+        region.write_to_file(output_path, Q=100)  # Q=90 表示 JPEG 质量
         print(f"保存瓦片: {output_path}")
     except Exception as e:
         print(f"瓦片 ({tx}, {ty}) 处理失败: {e}")
